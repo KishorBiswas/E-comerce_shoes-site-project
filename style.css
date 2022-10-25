@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:90%;
+    height: 84vh;
+    border: 2px solid #000;
+    border-radius:7px;
+    padding: 10px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#0984e3,#00cec9);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 4px 5px #000;
+
+}
+
+.container::before{
+    content: '';
+    width:190px;
+    height: 65px;
+    background-color: rgba(255, 0, 0, 0.966);
+    position: absolute;
+    top:-5px;
+    left:-90px;
+    transform: rotate(-40deg);
+    z-index: 1;
+}
+
+.discount{
+    position: absolute;
+    top:10px;
+    left:-2px;
+    transform: rotate(-40deg);
+    color:blue;
+    z-index: 5;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 0.5px;
+}
+.text{
+    margin:0;
+    padding: 25px;
+    /* border: 2px solid #000; */
+    position:relative ;
+}
+
+.text h1{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Noto Sans Mono', monospace;
+    color: mediumblue;
+    margin-top: 25px 5px;
+}
+
+.text h3{
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color:magenta;
+}
+
+.text p span{
+    color:#ee2;
+    font-size: 25px;
+    font-weight: 500;
+    /* -webkit-text-stroke: 0.5px #eee; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.text p{
+    color:#000;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#reat{
+    color:#fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.icon i{
+    color:#f3d342;
+    font-size: 17px;
+    margin: 9px 2px;
+}
+.icon span{
+    font-size: 18px  !important;
+    font-weight: 500;
+    color:blue;
+    background-color: magenta;
+    padding: 5px 12px;
+    border-radius: 2px 30px;
+}
+
+.price p s{
+    font-size: 19px !important;
+    margin-top: 15px;
+    color: red;
+    letter-spacing: 2px;
+}
+
+.price p span{
+    font-size: 19px !important;
+    margin-top: 35px;
+    /* color: red; */
+    letter-spacing: 2px;
+}
+
+.text li{
+    list-style: none;
+    display: inline-block;
+    width:35px;
+    height: 35px;
+    /* border: 0.5px solid #212121; */
+    margin-right: 28px;
+    border-radius: 50%;
+    position:relative
+}
+
+.text li img{
+    /* margin: 0; */
+    width:55px;
+    margin-right: 12px;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+.text li:hover img{
+    transform: scale(1.6);
+    opacity: 1;
+}
+
+.size_quantity label{
+    font-size: 18px;
+    color: blue;
+    margin-top: 17px;
+}
+
+.size_quantity select{
+    font-size: 15px;
+    font-weight: 400;
+    color: blue;
+    margin-top: 17px;
+    margin-right: 25px;
+    border-radius: 8px;
+    background-color: rgb(37, 223, 37);
+    text-align: center;
+    opacity: 2;
+}
+
+#buy_btn{
+    padding:8px 15px;
+    font-size: 15px;
+    border-radius: 20px;
+    color: red;
+    font-weight: 700;
+    margin-right:8px;
+    background-color: #fa980f;
+    border: 1px solid transparent;
+    outline: none;
+    box-shadow: 2px 2px 5px #010101;
+    transition: transform 0.5s;
+}
+
+#buy_btn i{
+    color:blue;
+    margin-right: 5px;
+    transition:0.5s;
+}
+
+#buy_btn:hover i{
+    color:magenta;
+}
+
+#buy_btn:hover{
+    color:blue;
+    background-color: transparent;
+    border: 1px solid #000;
+    transform: scale(1.05);
+}
+
+/* show the Zoom img here */
+.magified_img{
+    position: absolute;
+    top:0;
+    left:0;
+    /* border: 1px solid #000; */
+    width:100%;
+    height:100%;
+    background-color: #ff980040;
+    transform: scale(0.5);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s,  top 0.5s ;
+}
+
+.magified_img.active{
+    top:0;
+    opacity: 1;
+    display: block;
+    transform: scale(1);
+}
+
+.shoes_img{
+    position: relative;
+    /* border: 2px solid #000; */
+   
+}
+.shoes_img img{
+    width:100%;
+    transition: transform 0.5s;
+}
+
+.shoes_img:hover img{
+    transform: scale(1.08);
+}
+
+.magnifire_lens{
+    position: absolute;
+    /* top:0;
+    left:0; */
+    width:150px;
+    height: 100px;
+    background-color: #ff980040;
+    border: 1px solid orange;
+    opacity: 0;
+}
+
+.magnifire_lens.active{
+    opacity: 1;
+}
+
+
+
+/* used for Small Screen */
+@media screen and (max-width:840px){
+
+    .container{
+        flex-direction: column;
+        height:auto;
+    }
+    .text{
+        display: flex-end;
+    }
+
+    .text h1{
+        font-size: 30px;
+    }
+
+    .text h3{
+        font-size: 20px;
+    }
+
+    .text span{
+        font-size: 15px;
+    }
+    .text p{
+        font-size: 13px;
+    }
+
+    .text li{
+        margin-right: 15px;
+    }
+    .text li img{
+        width:50px;
+        margin-right: 15px;
+    }
+
+    .shoes_img{
+        width:95%;
+        display: flex-start;
+    }
+
+    /* .shoes_img img{
+        width:50%;
+        align-self: center;
+        justify-items: center;
+    } */
+
+}

@@ -9,34 +9,34 @@ let main = document.querySelector(".mainImg");
 
         firstImg.addEventListener('click', ()=>{
             main.src = './imgPng/Shoes1.png';
-            // console.log(firstImg);
+          
         })
 
         secondImg.addEventListener('click', ()=>{
             main.src = './imgPng/Shoes2.png';
-            // console.log(secondImg);
+          
         })
 
 
         thiredImg.addEventListener('click', ()=>{
             main.src = './imgPng/Shoes3.png';
-            // console.log(thiredImg);
+            
         })
 
         fourImg.addEventListener('click', ()=>{
             main.src = './imgPng/Shoes44.png';
-            // console.log(fourImg);
+            
         })
 
         fiveImg.addEventListener('click', ()=>{
             main.src = './imgPng/Shoes5.png';
-            // console.log(fiveImg);
+            
         })
 
 
         sixImg.addEventListener('click', ()=>{
             main.src = './imgPng/Shoes6.png';
-            // console.log(sixImg);
+            
         })
 
 
